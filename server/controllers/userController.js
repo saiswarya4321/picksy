@@ -70,9 +70,20 @@ const login = async (req, res) => {
 };
 
 const logout = async (req, res) => {
-    res.clearCookie('token', { httpOnly: true, sameSite: 'None' }); // match cookie options
+  try {
+    res.clearCookie('token', {
+      httpOnly: true,
+      sameSite: 'None', // Required for cross-site cookies
+      secure: true,     // Required when sameSite is 'None'
+    });
+
     return res.status(200).json({ message: 'Logged out successfully' });
-}
+  } catch (error) {
+    console.error('Logout error:', error);
+    return res.status(500).json({ message: 'Logout failed', error: error.message });
+  }
+};
+
 
 module.exports = {
     createUser, login, logout
