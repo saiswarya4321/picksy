@@ -1,10 +1,13 @@
 import React, { useEffect, useRef } from 'react';
 import axios from 'axios';
+axios.defaults.withCredentials = true;
 
-const apiUrl = import.meta.env.VITE_API_BASE_URL;
+
+
 
 function Success() {
   const hasRun = useRef(false);
+  const apiUrl = import.meta.env.VITE_API_BASE_URL;
   useEffect(() => {
     if (hasRun.current) return; // already ran, skip
   hasRun.current = true;      // mark as run
