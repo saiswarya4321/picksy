@@ -13,6 +13,10 @@ function Login() {
   const navigate = useNavigate();
   const dispatch=useDispatch();
   const baseUrl = import.meta.env.VITE_API_BASE_URL;
+  useEffect(() => {
+  setEmail('');
+  setPassword('');
+}, []);
   const payload = {
     email, password
   }

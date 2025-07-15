@@ -12,6 +12,10 @@ function Signup() {
   const [password, setPassword] = useState('');
   const navigate = useNavigate();
   const baseUrl = import.meta.env.VITE_API_BASE_URL;
+  useEffect(() => {
+  setEmail('');
+  setPassword('');
+}, []);
 console.log(baseUrl);
 const [formErrors, setFormErrors] = useState({ email: "", password: "",name:"" })
 
