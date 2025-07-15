@@ -2,7 +2,7 @@ import axios from 'axios';
 import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import { Link, useNavigate } from 'react-router-dom';
-import { removeUser } from '../../redux/features/userSlice';
+import { removeUser } from '../redux/features/userSlice';
 
 
 function Header() {
