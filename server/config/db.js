@@ -1,5 +1,5 @@
 const { default: mongoose } = require("mongoose");
-require("dotenv").config();
+// require("dotenv").config();
 
 let isConnected = false; // 🔁 Reuse connection on Vercel serverless
 
