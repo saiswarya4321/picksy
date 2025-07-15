@@ -42,6 +42,8 @@ const validateForm = () => {
       console.log(response.data.existingUser)
 
   dispatch(saveUser(response.data.existingUser))
+  setEmail('');
+    setPassword('');
       navigate("/home")
     } catch (error) {
       console.log(error)

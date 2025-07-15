@@ -44,6 +44,9 @@ const validateForm = () => {
     try {
       await axios.post(`${baseUrl}/otp/send-otp`, { email });
       localStorage.setItem('signupData', JSON.stringify({ email, password ,name}));
+      setEmail('');
+    setPassword('');
+    setName('')
       navigate('/verify-otp');
     } catch (error) {
       console.error(error);
