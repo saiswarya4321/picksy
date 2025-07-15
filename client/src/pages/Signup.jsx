@@ -56,7 +56,7 @@ const validateForm = () => {
 
   return (
     <div className='min-h-screen bg-blue-50 flex justify-center items-center p-2'>
-    <form onSubmit={handleSendOtp} className='flex flex-col gap-2 border border-none shadow rounded p-6 bg-white '>
+    <form onSubmit={handleSendOtp} className='flex flex-col gap-2 border border-none shadow rounded p-6 bg-white ' autoComplete="off">
       
       <input type='text' name='name' id='name' placeholder='Name' onChange={(e) => setName(e.target.value)} 
       className=' border border-gray-200  rounded p-2  min-w-[300px] sm:min-w-[400px] focus:outline-none'/>

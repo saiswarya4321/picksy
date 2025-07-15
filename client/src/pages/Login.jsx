@@ -57,7 +57,7 @@ const validateForm = () => {
 
       <div></div>
       <div id='Login' className='p-2'>
-        <form onSubmit={handleLogin} className='flex flex-col p-4 sm:p-5 gap-2 bg-white shadow rounded   '>
+        <form onSubmit={handleLogin} className='flex flex-col p-4 sm:p-5 gap-2 bg-white shadow rounded   ' autoComplete="off">
           <input type="email" name="email" placeholder='email' className='p-2 w-[300px] sm:w-[400px] focus:outline-none rounded border border-gray-400'
             onChange={(e) => setEmail(e.target.value)} />
             {formErrors.email && <p className='text-red-500 text-xs '>{formErrors.email}</p>}
