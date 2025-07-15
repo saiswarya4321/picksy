@@ -24,8 +24,8 @@ paymentnewrouter.post('/create-checkout-session', async (req, res) => {
       payment_method_types: ['card'],
       line_items,
       mode: 'payment',
-      success_url: 'http://localhost:5173/successpage',
-      cancel_url: 'http://localhost:5173/cancel'
+      success_url: 'https://picksy-frontend.vercel.app/successpage',
+      cancel_url: 'https://picksy-frontend.vercel.app/cancel'
     });
 
     res.json({ id: session.id });

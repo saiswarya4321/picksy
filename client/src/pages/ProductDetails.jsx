@@ -84,8 +84,8 @@ function ProductDetails() {
             <div id="first-section" className=' max-w-[600px] overflow-hidden'>
                 <img src={product.image} alt="product-img" className='h-90 md:h-120  object-contain'/>
                 <div id='buttons' className='flex flex-row items-center justify-center gap-2 p-2 font-bold '>
-                    <button className='p-2 bg-amber-400 w-full rounded text-white h-10 text-xs lg:text-md ' onClick={addToCart}>ADD TO CART</button>
-                    <button onClick={()=>handleBuyNow(product)} className='w-full bg-amber-500 rounded p-2 text-white h-10 text-xs lg:text-md'>BUY NOW</button>
+                    <button className='p-2 bg-amber-400 w-full rounded text-white h-10 text-xs lg:text-lg ' onClick={addToCart}>ADD TO CART</button>
+                    <button onClick={()=>handleBuyNow(product)} className='w-full bg-amber-500 rounded p-2 text-white h-10 text-xs lg:text-lg'>BUY NOW</button>
                 </div>
             </div>
             <div id='details' className='flex flex-col gap-2 items-start justify-start p-1 sm:w-300 '>
