@@ -20,11 +20,15 @@ app.use(cookie());
 
 app.use(
   cors({
-    origin: process.env.FRONTEND_URL || "http://localhost:5173",
+    origin: [
+      "https://picksy-frontend.vercel.app", // ✅ Production frontend
+      "http://localhost:5173"               // ✅ Local development
+    ],
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true,
   })
 );
+
 
 app.use("/user", userRouter);
 app.use("/otp", otprouter);
