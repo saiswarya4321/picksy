@@ -42,6 +42,7 @@ const createBuy = async (req, res) => {
 const createCartOrder = async (req, res) => {
   try {
     const userId = req.user.id;
+    console.log("userId",userId)
 
     // 1. Get all cart items for user
     const cartItems = await CartModel.find({ user: userId }).populate('product');
