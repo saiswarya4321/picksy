@@ -88,12 +88,12 @@ function ProductDetails() {
                     <button onClick={()=>handleBuyNow(product)} className='w-full bg-amber-500 rounded p-2 text-white h-10 text-xs lg:text-lg'>BUY NOW</button>
                 </div>
             </div>
-            <div id='details' className='flex flex-col gap-2 items-start justify-start p-1 min-w-200 sm:w-300 '>
-                <p className='text-md text-gray-600 font-bold'>{product.name}</p>
+            <div id='details' className='flex flex-col gap-2 items-start justify-start p-1  '>
+                <p className='text-md text-gray-600 font-bold overflow-hidden max-w-[300px] md:max-w-[400px]'>{product.name}</p>
                 <p className='text-sm text-gray-500 '>{product.brand}</p>
                 <p className='text-black text-lg font-bold'>₹{product.price}</p>
                 <h2 className='text-md'>Available offers</h2>
-                <p className='text-gray-500 sm:max-w-[450px]'>Bank Offer5% cashback on Flipkart Axis Bank Credit Card upto ₹4,000 per statement quarterT&C
+                <p className='text-gray-500 max-w-[300px] md:max-w-[400px]'>Bank Offer5% cashback on Flipkart Axis Bank Credit Card upto ₹4,000 per statement quarterT&C
 
                     Bank Offer5% cashback on Axis Bank Flipkart Debit Card up to ₹750T&C
 

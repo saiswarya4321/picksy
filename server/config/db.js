@@ -1,4 +1,5 @@
 const { default: mongoose } = require("mongoose");
+require("dotenv").config();
 
 let isConnected = false; // 🔁 Reuse connection on Vercel serverless
 
@@ -17,12 +18,12 @@ const connectionDB = async () => {
     isConnected = db.connections[0].readyState === 1;
 
     if (isConnected) {
-      console.log("✅ Database connected successfully");
+      console.log("Database connected successfully");
     } else {
-      console.log("⚠️ Database connection failed");
+      console.log("Database connection failed");
     }
   } catch (error) {
-    console.error("❌ Error connecting to database:", error);
+    console.error(" Error connecting to database:", error);
   }
 };
 

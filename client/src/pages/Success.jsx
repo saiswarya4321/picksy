@@ -22,10 +22,16 @@ function Success() {
       }
     };
 
-   if (!sessionStorage.getItem("cartOrderPlaced")) {
-      sessionStorage.setItem("cartOrderPlaced", "true");
+  //  if (!sessionStorage.getItem("cartOrderPlaced")) {
+  //   sessionStorage.setItem("cartOrderPlaced", "true");
+
+    // 🔁 Wait for cookie to be available
+    setTimeout(() => {
       placeCartOrder();
-    }
+    }, 500); // ✅ 500ms delay works in most cases
+  // }
+
+
   }, []);
 
   return (
