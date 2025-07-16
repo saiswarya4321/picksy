@@ -38,7 +38,7 @@ function Productlist() {
             {products.map((product, index) => (
                 <Link to={`/productdetails/${product._id}`} key={index}>
                 
-                <div key={index} className='basis-[1/3]  md:basis-[1/4] lg:basis-[1/5] flex flex-col rounded shadow gap-2 p-1 bg-white justify-center items-center hover:shadow-2xl hover:bg-amber-50'>
+                <div key={index} className='basis-[1/2]  md:basis-[1/4] lg:basis-[1/5] flex flex-col rounded shadow gap-2 p-1 bg-white justify-center items-center hover:shadow-2xl hover:bg-amber-50'>
                 <div className='overflow-hidden'><img src={product.image} alt=""  className='w-[150px] h-[150px] md:w-[200px] lg:w-[300px] md:h-[300px]  object-contain'/></div>
 
                 <p className='text-gray-800 text-xs sm:text-sm '>{product.brand}</p>

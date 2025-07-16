@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-// require("dotenv").config()
+
 let isConnected = false; // ✅ Reuse existing connection on Vercel serverless
 
 const connectionDB = async () => {
