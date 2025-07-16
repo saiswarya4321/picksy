@@ -34,7 +34,7 @@ function SuccessPage() {
   }, []);
 
   return (
-    <div className='min-h-screen bg-blue-50 flex justify-center items-center'>
+    <div className='min-h-screen bg-blue-50 flex flex-col gap-2 justify-center items-center'>
       <div className='p-3 bg-green-600 text-white rounded shadow'>
         ✅ Payment Successful! Order Placed.
       </div>
