@@ -41,7 +41,9 @@ function Orders() {
         </div>
       ))}
     </div>
+    
   ))}
+  {orders.length===0 && (<div className='text-center bg-red-600 text-white p-3 rounded shadow'>You have no orders</div>)}
 </div>
 
   )

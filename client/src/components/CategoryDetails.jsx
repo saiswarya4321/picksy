@@ -34,7 +34,7 @@ function CategoryDetails() {
      <div className='flex  flex-wrap gap-2 items-center justify-center'>
         {products.map(product=>
 (<Link to={`/productdetails/${product._id}`} key={product._id} className=' hover:bg-blue-200'>
-<div key={product._id} className='p-2 flex flex-col justify-center items-center  sm:basis-[1/3] lg:basis-[1/4]  shadow rounded gap-2 bg-white '>
+<div key={product._id} className='p-2 flex flex-col justify-center items-center  sm:basis-[1/3] lg:basis-[1/4]  shadow rounded gap-2 bg-white overflow-hidden'>
 <div className='overflow-hidden'><img src={product.image} alt={product.name} className="w-[200px] h-[170px] md:w-[200px] lg:w-[300px] md:h-[300px]  object-contain" /></div>
     
             <h2 className="text-sm text-gray-500 font-semibold">{product.name}</h2>

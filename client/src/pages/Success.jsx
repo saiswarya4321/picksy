@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 axios.defaults.withCredentials = true;
 
 
@@ -39,6 +40,7 @@ function Success() {
       <div className='p-3 bg-green-600 text-white rounded'>
          Payment Successful! Full Cart Ordered.
       </div>
+       <Link to={"/orders"}><div className='bg-violet-500 text-white text-center p-3 rounded shadow'>Go to orders</div></Link>
     </div>
   );
 }
