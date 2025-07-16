@@ -13,8 +13,9 @@ const paymentnewrouter = require("../routes/paymentnew.js"); // ⬅️ changed
 const serverless = require("serverless-http");
 
 const app = express();
-connectionDB();
-
+(async () => {
+  await connectionDB();
+})();
 app.use(express.json());
 app.use(cookie());
 
