@@ -16,6 +16,7 @@ const serverless = require("serverless-http");
 
 const app = express();
 
+// Middleware
 app.use(express.json());
 app.use(cookie());
 
@@ -43,18 +44,9 @@ app.get("/", (req, res) => {
   res.send("Welcome to Picksy");
 });
 
-// ❌ Do NOT use app.listen()
+// ✅ Ensure MongoDB connects on cold start
+connectionDB(); // 🔁 No await here — just call once globally
 
-// ✅ Export only after DB connection
-let isExported = false;
-
-const setupAndExport = async () => {
-  await connectionDB();
-  if (!isExported) {
-    isExported = true;
-    module.exports = app;
-    module.exports.handler = serverless(app);
-  }
-};
-
-setupAndExport();
+// ✅ Export immediately
+module.exports = app;
+module.exports.handler = serverless(app);
